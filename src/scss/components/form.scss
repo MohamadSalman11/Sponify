@@ -1,0 +1,46 @@
+.upload {
+  position: relative;
+  width: 102rem;
+  height: 58rem;
+  background-color: $color-white;
+  border-radius: 11px;
+  column-gap: 8rem;
+  overflow: hidden;
+  box-shadow: $box-shadow--1;
+
+  & > div:not(&__white__background) {
+    transform: translateY(-5rem);
+    row-gap: 2rem;
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+    }
+    span {
+      label {
+        width: 12rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .icon--close,
+  .arrow-right {
+    position: absolute;
+    right: 2%;
+    z-index: 100;
+    cursor: pointer;
+  }
+
+  .icon--close {
+    width: 1.8rem;
+    height: 1.8rem;
+    top: 3.5%;
+  }
+
+  .arrow-right {
+    top: 2.5%;
+    display: none;
+  }
+}

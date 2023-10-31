@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" crossorigin rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="scss/main.scss" rel="stylesheet" />
+    <link type="image/x-icon" href="images/logo-icon.png" rel="icon" />
+    <script src="js/main.js" type="module" defer></script>
+    <title>Sponify</title>
+  </head>
+  <body>
+    <div class="sponify__ctn">
+      <div class="header">
+        <span class="header__logo">
+          <img src="images/logo.png" alt="logo" />
+        </span>
+        <span class="header__searchbar">
+          <span class="header__searchbar__ctn__input">
+            <input
+              class="search__input"
+              type="text"
+              placeholder="Search over 1,000,000 recipes..."
+            />
+            <button class="search__btn">
+              <img
+                class="search__icon"
+                src="images/icons/search.png"
+                alt="search-icon"
+              />
+              <p>SEARCH</p>
+            </button>
+          </span>
+        </span>
+        <span class="header__addRecipe__viewBookmarks">
+          <span class="addRecipe__ctn">
+            <img src="images/icons/add-recipe.png" alt="add-icon" />
+            <p>ADD RECIPE</p>
+          </span>
+          <span class="bookmark__ctn">
+            <img src="images/icons/bookmark-green.png" alt="bookmakr-icon" />
+            <p>BOOKMARKS</p>
+          </span>
+          <div class="bookmark__list__ctn">
+            <div class="bookmark__message--empty">
+              <img src="images/icons/warning.png" alt="warning icon" />
+              <p>No bookmarks yet. Find a nice recipe and bookmark it :)</p>
+            </div>
+            <ul class="bookmark__list"></ul>
+          </div>
+        </span>
+      </div>
+      <div class="sidebar__recipe">
+        <div class="sidebar">
+          <span class="results__message--error">
+            <img src="images/icons/warning.png" alt="warning icon" />
+            <p>
+              Sorry, no recipes found. Please check your internet connection :(
+            </p>
+          </span>
+          <span class="pagination__btns">
+            <span class="pagination__left" data-pagination="left"
+              >&larr; PAGE
+              <p class="pagination__left__number">0</p></span
+            >
+            <span class="pagination__right" data-pagination="right"
+              >PAGE
+              <p class="pagination__right__number">2</p>
+              &rarr;</span
+            >
+          </span>
+          <img
+            class="sidebar__loading--spinner"
+            src="images/icons/loading-spinner.png"
+            alt="loading-spinner"
+          />
+          <ul class="results"></ul>
+        </div>
+        <div class="recipe">
+          <div class="recipe__foreground">
+            <img
+              class="recipe__loading--spinner"
+              src="images/icons/loading-spinner.png"
+              alt="loading-spinner"
+            />
+            <span class="recipe__message--start">
+              <img src="images/icons/happy-emoji.png" alt="happy-emoji" />
+              <p>Start by searching for a recipe or an ingredient. Have fun!</p>
+            </span>
+          </div>
+          <span class="recipe__img">
+            <h1 class="recipe__title">
+              <span></span>
+            </h1>
+          </span>
+          <div class="recipe__details">
+            <div class="recipe__details__time__serving">
+              <span class="recipe__details__time">
+                <img src="images/icons/clock.png" alt="clock-icon" />
+                <p class="recipe__time">60</p>
+                <p>MINUTES</p>
+              </span>
+              <span class="recipe__details__serving">
+                <img src="images/icons/users.png" alt="users-icon" />
+                <p class="recipe__servings">4</p>
+                <p>SERVINGS</p>
+                <span class="plus__minus">
+                  <img
+                    class="minus"
+                    src="images/icons/minus.png"
+                    alt="minus-icon"
+                  />
+                  <img
+                    class="plus"
+                    src="images/icons/plus.png"
+                    alt="plus-icon"
+                  />
+                </span>
+              </span>
+            </div>
+            <div class="recipe__details__bookmark__person__ctn">
+              <span class="recipe__details__person">
+                <img src="images/icons/person.png" alt="user icon" />
+              </span>
+              <span class="recipe__details__bookmark">
+                <img
+                  src="images/icons/bookmark-white.png"
+                  alt="bookmark-icon"
+                />
+                <img
+                  class="bookmark--filled"
+                  src="images/icons/filled-bookmark.png"
+                  alt="bookmark-icon"
+                />
+              </span>
+            </div>
+          </div>
+          <div class="recipe__ingredients">
+            <h1>RECIPE INGREDIENTS</h1>
+            <ul class="recipe__ingredients--list"></ul>
+          </div>
+          <div class="recipe__directions">
+            <h2>HOW TO COOK IT</h2>
+            <p>
+              This recipe was carefully designed and tested by Closet Cooking.
+              Please check out directions at their website.
+            </p>
+            <a class="recipe__directions__btn" href="#" target="_blank"
+              >DIRECTIONS <span>&rarr;</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blur__background">
+      <form class="upload" action="#">
+        <div class="upload__white__background">
+          <img
+            class="upload__loadingSpinner"
+            src="images/icons/loading-spinner.png"
+            alt="loading-spinner"
+          />
+          <span class="upload__message--error">
+            <img src="images/icons/warning.png" alt="warning icon" />
+            <p>
+              Oops, there was an error during upload. Please check your internet
+              connection and make sure you typed a valid value. Please try
+              again.
+            </p>
+          </span>
+          <span class="upload__message--success">
+            <img src="images/icons/happy-emoji.png" alt="happy-emoji" />
+            <p class="upload__message">
+              Your recipe has been successfully uploaded
+            </p>
+          </span>
+        </div>
+        <!-- RECIPE DATA -->
+        <div class="upload__data">
+          <h1>RECIPE DATA</h1>
+          <span>
+            <label>Title</label>
+            <input
+              class="upload__title"
+              name="title"
+              type="text"
+              placeholder="VEGGIE PIZZA"
+              minlength="4"
+              required
+            />
+          </span>
+          <span>
+            <label>URL</label>
+            <input
+              class="source_url"
+              name="source_url"
+              type="url"
+              placeholder="https://www.simplyrecipes.com"
+              required
+            />
+          </span>
+          <span>
+            <label>Image URL</label>
+            <input
+              class="upload__image__URL"
+              name="image_url"
+              type="url"
+              placeholder="https://simplyrecipes.com/pizza.png"
+              required
+            />
+          </span>
+          <span>
+            <label>Publisher</label>
+            <input
+              class="upload__publisher"
+              name="publisher"
+              type="text"
+              placeholder="Simply Recipes"
+              minlength="4"
+              required
+            />
+          </span>
+          <span>
+            <label>Prep time</label>
+            <input
+              class="upload__prepTime"
+              name="cooking_time"
+              type="number"
+              placeholder="135"
+              min="1"
+              required
+            />
+          </span>
+          <span>
+            <label>Servings</label>
+            <input
+              class="upload__servings"
+              name="servings"
+              type="number"
+              placeholder="4"
+              min="1"
+              required
+            />
+          </span>
+        </div>
+        <!-- INGREDIENTS -->
+        <div class="upload__ingredients">
+          <h1>INGREDIENTS</h1>
+          <span>
+            <label>Ingredient 1</label>
+            <input
+              class="upload__ingredient--1"
+              name="ingredient_1"
+              type="text"
+              placeholder="0.5,kg,Rice"
+              minlength="3"
+              required
+            />
+          </span>
+          <span>
+            <label>Ingredient 2</label>
+            <input
+              class="upload__ingredient--2"
+              name="ingredient_2"
+              type="text"
+              placeholder="1,,Avocado"
+              minlength="3"
+            />
+          </span>
+          <span>
+            <label>Ingredient 3</label>
+            <input
+              class="upload__ingredient--3"
+              name="ingredient_3"
+              type="text"
+              placeholder=",,salt"
+              minlength="3"
+            />
+          </span>
+          <span>
+            <label>Ingredient 4</label>
+            <input
+              class="upload__ingredient--4"
+              name="ingredient_4"
+              type="text"
+              placeholder="Format: 'Quantity, Unit, Description'"
+              minlength="3"
+            />
+          </span>
+          <span>
+            <label>Ingredient 5</label>
+            <input
+              class="upload__ingredient--5"
+              name="ingredient_5"
+              type="text"
+              placeholder="Format: 'Quantity, Unit, Description'"
+              minlength="3"
+            />
+          </span>
+          <span>
+            <label>Ingredient 6</label>
+            <input
+              class="upload__ingredient--6"
+              name="ingredient_6"
+              type="text"
+              placeholder="Format: 'Quantity, Unit, Description'"
+              minlength="3"
+            />
+          </span>
+        </div>
+        <button class="upload__btn">
+          <img src="images/icons/upload-icon.png" alt="upload-icon" />
+          <p>UPLOAD</p>
+        </button>
+        <img
+          class="icon--close"
+          src="images/icons/close.png"
+          alt="close-icon"
+        />
+        <img
+          class="arrow-right"
+          src="images/icons/arrow-right.png"
+          alt="arrow-right icon"
+        />
+      </form>
+    </div>
+  </body>
+</html>

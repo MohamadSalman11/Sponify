@@ -1,0 +1,85 @@
+// ** GENERAL CLASSES FOR DIFFERENT ELEMENTS **
+// STYLES FOR THE RECIPE RESULTS & BOOKED RECIPE
+
+.results,
+.bookmark__list {
+  padding: 2.4rem 0;
+  .result {
+    padding: 1rem 1.6rem;
+    column-gap: 1.2rem;
+    transition: all 0.35s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-white--2;
+      transform: translateY(-3px);
+    }
+  }
+
+  .result__basicInfos {
+    row-gap: 1rem;
+  }
+
+  .result__title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    white-space: nowrap;
+    @include titleStyle;
+  }
+
+  .result__subTitle {
+    font-size: 1.2rem;
+    color: $color-grey-dark;
+    text-transform: uppercase;
+  }
+
+  .result__img {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: linear-gradient($color-green--dark, $color-green--light);
+  }
+
+  .result__person__ctn {
+    position: relative;
+    width: 18rem;
+  }
+
+  .result__person {
+    position: absolute;
+    right: 0;
+    top: -30%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $color-grey--2;
+    border-radius: 50%;
+    img {
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-left: 0.3rem;
+      margin-top: -0.1rem;
+    }
+  }
+}
+
+.results__message--error,
+.bookmark__message--empty,
+.recipe__message--start {
+  width: 90%;
+  column-gap: 1.2rem;
+  margin-top: 4.4rem;
+  margin-left: 3.3rem;
+  font-size: 1.6rem;
+}
+
+.recipe__message--start {
+  width: 45%;
+  margin: 4.4rem auto;
+  line-height: 150%;
+}
+
+.results__message--error {
+  display: none;
+}

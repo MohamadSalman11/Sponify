@@ -1,0 +1,92 @@
+.search__btn {
+  position: absolute;
+  right: 0;
+  @include buttonStyle(12rem);
+  .search__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.recipe__directions__btn {
+  @include buttonStyle(13rem);
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.pagination__btns {
+  position: absolute;
+  width: 100%;
+  bottom: 4%;
+  span {
+    font-size: 1.4rem;
+    padding: 1rem 1.2rem;
+    border-radius: 22px;
+    background-color: $color-white--dark;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s;
+    @include hiddeElement;
+    &:hover {
+      background-color: $color-white--2;
+    }
+
+    p {
+      margin: 0 0.4rem;
+    }
+  }
+}
+
+.upload__btn {
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  width: 20rem;
+  padding: 1.2rem;
+  transform: translateX(-50%);
+  background: linear-gradient($color-green--light, $color-green--dark);
+  column-gap: 1.2rem;
+  font-size: 1.8rem;
+  color: $color-white;
+  border: none;
+  outline: none;
+  border-radius: 11px;
+  cursor: pointer;
+  transition: width 0.2s;
+
+  &:hover {
+    width: 23rem;
+  }
+  img {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.plus,
+.minus {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: scale 0.2s ease-in-out;
+  border-radius: 50%;
+  user-select: none;
+
+  &:hover {
+    scale: 1.08;
+    background-color: $color-white;
+  }
+}

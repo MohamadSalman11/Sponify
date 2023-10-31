@@ -1,0 +1,51 @@
+.header {
+  width: 100%;
+  height: 8rem;
+  &__ {
+    &logo {
+      flex-grow: 0.5;
+      padding-left: 2rem;
+    }
+
+    &searchbar {
+      flex-grow: 4;
+      padding-left: 4.4rem;
+      box-shadow: $box-shadow--2;
+      transition: transform 0.2s;
+      &:focus-within {
+        transform: translateY(-3px);
+      }
+    }
+
+    &addRecipe__viewBookmarks {
+      flex-grow: 2;
+      padding-right: 2rem;
+      height: 100%;
+      user-select: none;
+      span:not(.result__person__ctn, .result__person) {
+        position: relative;
+        column-gap: 8px;
+        width: 50%;
+        height: 100%;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        &:hover {
+          background-color: $color-grey--2;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+    }
+
+    &searchbar__ctn__input {
+      width: fit-content;
+      position: relative;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// ** THIS CLASSES ARE CREATED TO BE USED IN JS **
+.show {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  visibility: visible !important;
+}
+
+.hidde {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+.red-border {
+  border: 2px solid crimson !important;
+}
+
+.display-flex {
+  display: flex !important;
+}
+
+.display-none {
+  display: none !important;
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Sponify",
+  "version": "1.0.0",
+  "description": "A search recpies application(10/15/2023)",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel --no-source-maps",
+    "build": "parcel build --no-source-maps",
+    "style:lint": "npx stylelint **/*.scss"
+  },
+  "author": "Mohamad Salman",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "assert": "^2.1.0",
+    "buffer": "^6.0.3",
+    "eslint": "^8.51.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react": "^7.33.2",
+    "events": "^3.3.0",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.9.3",
+    "path-browserify": "^1.0.1",
+    "prettier": "^3.0.3",
+    "process": "^0.11.10",
+    "punycode": "^1.4.1",
+    "stream-browserify": "^3.0.0",
+    "stylelint": "^15.10.2",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-recommended-scss": "^12.0.0",
+    "url": "^0.11.3",
+    "util": "^0.12.5"
+  },
+  "dependencies": {
+    "fractional": "^1.0.0"
+  }
+}

@@ -1,0 +1,91 @@
+// ** CENTER VERTICALLY **
+.header,
+.result,
+.header > *,
+.plus__minus,
+.recipe__ingredient,
+.recipe__details__time,
+.recipe__details__serving,
+.header__searchbar__ctn__input,
+.recipe__details__time__serving,
+.upload__data span,
+.upload__ingredients span,
+.bookmark__message--empty,
+.recipe__message--start {
+  display: flex;
+  align-items: center;
+}
+
+// ** DISPLAY ELEMENTS VERTICALLY **
+.result__basicInfos,
+.upload > div {
+  display: flex;
+  flex-direction: column;
+}
+
+// ** DISPLAY ELEMENTS HORIZONTOLLY **
+.upload,
+.pagination__btns span,
+.recipe__details__bookmark__person__ctn {
+  display: flex;
+}
+
+// ** CENTER VERTICALLY & REVERSE DIRECTION **
+.upload__white__background span {
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+// **  CENTER HORIZONTALLY & VERTICALLY (WITH DISPLAY:FLEX) **
+.search__btn,
+.recipe__details__bookmark,
+.recipe__details__person,
+.header__addRecipe__viewBookmarks span:not(.result__person__ctn),
+.upload,
+.upload__btn,
+.upload__white__background,
+.result__person {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// **  CENTER HORIZONTALLY & VERTICALLY (WITHOUT DISPLAY:FLEX) **
+.blur__background {
+  align-items: center;
+  justify-content: center;
+}
+
+// **  CENTER VERTICALLY (WITHOUT DISPLAY:FLEX) **
+.results__message--error {
+  align-items: center;
+}
+
+// ** CENTER VERTICALLY & MAKE SPACE BETWEEN **
+.header__addRecipe__viewBookmarks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// ** MAKE SPACE BETWEEN **
+.sidebar__recipe {
+  display: flex;
+  justify-content: space-between;
+}
+
+// ** CENTER VERTICALLY & MAKE SPACE AROUND **
+.recipe__details,
+.pagination__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+// ** DISPLAY ELEMENTS VERTICALLY AND CENTER **
+.recipe__directions,
+.recipe__ingredients {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

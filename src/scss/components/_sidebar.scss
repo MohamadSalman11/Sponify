@@ -1,0 +1,10 @@
+.sidebar {
+  width: 32%;
+  min-height: 100%;
+  position: relative;
+  background-color: $color-white;
+
+  &__loading--spinner {
+    @include loadingSpinnerStyle(5.5rem, 5.5rem);
+  }
+}

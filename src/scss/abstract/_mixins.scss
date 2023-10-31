@@ -1,0 +1,49 @@
+@mixin buttonStyle($width) {
+  border: none;
+  outline: none;
+  width: $width;
+  height: 100%;
+  padding: 1.2rem;
+  font-size: 1.3rem;
+  border-radius: 22px;
+  cursor: pointer;
+  font-family: inherit;
+  color: $color-white;
+  column-gap: 0.6rem;
+  transition: all 0.2s;
+  background: linear-gradient($color-green--light, $color-green--dark);
+  user-select: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+@mixin titleStyle {
+  background: linear-gradient($color-green--dark, $color-green--light);
+  // * TO ENSURE THAT WORKS ON ALL BROWSERS *
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin hiddeElement {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+@mixin showElement {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+@mixin loadingSpinnerStyle($width, $height) {
+  width: $width;
+  height: $height;
+  position: absolute;
+  left: 50%;
+  top: 8%;
+  animation: loading-spinner 1.3s linear infinite;
+  @include hiddeElement;
+}

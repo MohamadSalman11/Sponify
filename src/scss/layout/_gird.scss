@@ -1,0 +1,5 @@
+// CREATE 2 COLUMNS(each one= 1fr)
+.recipe__ingredients--list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

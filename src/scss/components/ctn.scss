@@ -1,0 +1,16 @@
+.sponify__ctn {
+  position: relative;
+  max-width: 95rem;
+  height: fit-content;
+  margin: 8rem auto;
+  overflow: hidden;
+  border-radius: 11px;
+  box-shadow: $box-shadow--1;
+  background-color: $color-white--dark;
+}
+// THE CONTAINER WHERE THE SIDEBAR & RECIPE ARE IN
+.sidebar__recipe {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}

@@ -1,0 +1,17 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  min-height: calc(100vh - 8vw);
+  background: linear-gradient($color-green--light, $color-green--dark);
+  // This property allways define after background(Otherwise it will be overwritten)
+  background-attachment: fixed;
+}
+
+body,
+input::placeholder {
+  letter-spacing: 0.4px;
+}
+
+::selection {
+  background-color: #53c47a;
+}
