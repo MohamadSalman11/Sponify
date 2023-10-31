@@ -1,4 +1,4 @@
-import { Fraction } from 'fractional';
+import fracty from 'fracty';
 import {
   recipeImg,
   cookingTime,
@@ -17,7 +17,7 @@ export const renderIngredients = function (recipe) {
   ingredientsList.innerHTML = '';
   recipe.forEach((ingredient) => {
     const { quantity } = ingredient;
-    const newQuantity = quantity ? new Fraction(ingredient.quantity) : '';
+    const newQuantity = quantity ? fracty(ingredient.quantity) : '';
     const html = `<li class="recipe__ingredient">
       <img src="${checkMarkIcon}" alt="checkmark" />
       <div>

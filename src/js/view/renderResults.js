@@ -4,9 +4,11 @@ import { currentPage } from '../model/updatePage';
 import { renderRecipeList } from '../helper';
 
 // RENDER THE RESULTS
-export default renderResults = function () {
+const renderResults = function () {
   resultsList.innerHTML = '';
   loadingSpinner.classList.remove('show');
   const newResults = Pages[currentPage];
   renderRecipeList(newResults, resultsList, 20);
 };
+
+export default renderResults;

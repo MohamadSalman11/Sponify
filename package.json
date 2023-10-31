@@ -37,6 +37,6 @@
     "util": "^0.12.5"
   },
   "dependencies": {
-    "fractional": "^1.0.0"
+    "fracty": "^1.0.11"
   }
 }

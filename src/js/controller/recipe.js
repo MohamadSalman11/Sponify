@@ -59,7 +59,6 @@ export class ControllerRecipe {
       publisher: recipe.publisher,
       ...(recipe.key ? { key: recipe.key } : {}),
     };
-    console.log(lastResult);
   }
 
   // CHECK IF THE RECIPE IS ALREADY EXIST IN THE LIST

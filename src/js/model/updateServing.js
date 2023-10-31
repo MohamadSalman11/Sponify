@@ -1,7 +1,7 @@
 // CALCULATING THE NEW QUANTITY
 import { lastRecipe } from './recipe';
 
-export default updateServing = function (oldServ, newServ) {
+const updateServing = function (oldServ, newServ) {
   const newRecipe = lastRecipe.ingredients.map((ing) => {
     const oldQuan = ing.quantity;
     ing.quantity = (oldQuan * newServ) / oldServ;
@@ -9,3 +9,5 @@ export default updateServing = function (oldServ, newServ) {
   });
   return newRecipe;
 };
+
+export default updateServing;
